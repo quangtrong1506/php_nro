@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'patrick hand';
+    src: url('../fonts/PatrickHand-Regular.ttf');
+}
+:root {
+    --main: #1f6e8c;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'patrick hand';
+}
+body {
+    font-family: 'patrick hand';
+}
+.swal2-container {
+    z-index: 10000;
+}
+.header {
+    background-color: rgba(0, 0, 0, 0.02);
+    /* box-shadow: 0 0 1px rgba(0, 0, 0, 0.511); */
+    width: 100%;
+    position: relative;
+    z-index: 11;
+}
+.header ul {
+    margin: 0 auto;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+}
+.header ul li {
+    display: inline-block;
+}
+.header ul li a {
+    display: inline-block;
+    font-size: 28px;
+    color: var(--main);
+    text-decoration: none;
+    padding: 0 10px;
+}
+.header ul li a:hover {
+    color: #1c6268;
+}
+
+.body {
+    padding: 15px 0;
+    min-height: 320px;
+    position: relative;
+    z-index: 10;
+}
+.background {
+    background-image: url('../images/banner_2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 440px) {
+    .header ul li a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .w-400-100 {
+        display: inline-block;
+        width: 100%;
+    }
+    .w-400-100-x {
+        display: none;
+    }
+    .header ul li a {
+        font-size: 18px;
+    }
+}
+div:where(.swal2-container) .swal2-html-container {
+    padding-bottom: 8px !important;
+}
